@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+    padding: 3em;
+    line-height: 2em;
+    background: white;
+}
+
+#book{
+    background: grey;
+    width: 80%;
+    height: auto;
+    margin: 10px auto;
+    padding: 2em; 
+    align-items: center;
+}
+
+button.rmv-btn{
+    margin: 1em;
+    padding: 1em;
+}
+
+button.edit-btn{
+    margin: 1em;
+    padding: 1em;
+}
+
+#new-book{
+    padding: 1em auto;
+} 
+
+#form{
+    background: white;
+    padding: 1em;
+    line-height: 1.5em;
+    display: none;
+    z-index: 1;
+    position: absolute;
+    animation-name: animateModal;
+    animation-duration: .4s;
+    box-shadow: 10px 10px 10px black;
+}
+
+#form > h1{
+    font-size: 1rem;
+    
+}
+
+#close{
+    position: relative;
+    left: 80%;
+    margin: 1.5em 0;
+}
+
+input{
+    padding: .5em;
+}
+
+.submit{
+    position: relative;
+    left: 70%;
+    display: block;
+}
+
+@keyframes animateModal {
+    from{
+        top: -300px;
+        opacity: 0;
+    }
+    to{
+        top: 50%;
+        opacity: 1;
+    }
+}
