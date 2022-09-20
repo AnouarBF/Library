@@ -1,46 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
-*{
-    box-sizing: border-box;
-    font-family: 'Ubuntu', sans-serif;
+@font-face {
+    font-family: ubuntu;
+    src: url(../fonts/Ubuntu-Bold.ttf),
+         url(../fonts/Ubuntu-BoldItalic.ttf)
+         url(../fonts/Ubuntu-Regular.ttf);
 }
 
 body{
+    box-sizing: border-box;
     min-height: 100vh;
-    background: black;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    font-family: ubuntu;
 }
 
 #container{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     width: 70%;
     padding: 3em;
     line-height: 2em;
     background: white;
+    font-family: ubuntu;
 }
 
 #book{
     background: grey;
-    width: 80%;
+    width: 20%;
     height: auto;
     margin: 10px auto;
     padding: 2em; 
     align-items: center;
 }
 
-button.rmv-btn{
-    margin: 1em;
-    padding: 1em;
-}
-
+button.rmv-btn,
 button.edit-btn{
     margin: 1em;
     padding: 1em;
+    font-family: ubuntu;
 }
 
 #new-book{
@@ -57,11 +56,10 @@ button.edit-btn{
     animation-name: animateModal;
     animation-duration: .4s;
     box-shadow: 10px 10px 10px black;
-}
 
-#form > h1{
-    font-size: 1rem;
-    
+    h1{
+        font-size: 1rem;
+    }
 }
 
 #close{
@@ -86,7 +84,7 @@ input{
         opacity: 0;
     }
     to{
-        top: 50%;
+        top: 10px;
         opacity: 1;
     }
 }

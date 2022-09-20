@@ -1,18 +1,7 @@
-// grabing the elements.
-const container = document.getElementById('container')
-const addBookBtn = document.getElementById('new-book')
-const form = document.getElementById('form');
-const cancel = document.getElementById('close');
-const body = document.getElementsByTagName('body');
-const submit = document.querySelector('.submit');
-const tt = document.getElementById('title');
-const au = document.getElementById('author');
-const pg = document.getElementById('pages');
-const rd = document.getElementById('status');
+import {container, addBookBtn, form, cancel, body, submit, tt, au, pg, rd} from './dom'
 
 // The book object that identify the book's caracteristics
-
-function Book(title, author, pages, read){
+export function Book(title, author, pages, read){
     this.title = title;
     this.author = author;
     this.pages = pages;
@@ -72,29 +61,5 @@ function Book(title, author, pages, read){
         bookPages.innerText = `pages ${pages}`;
         bookStatus.innerText = `status ${read}`;
 
-        // myLibrary.push(this);
     }
 }
-
-const newBook = new Book('The power of habit', "Charles Duhigg", 247, "read");
-newBook.createBook();
-
-const anotherBook = new Book('Poor dad rich dad', "Robert kiozaky", 183, "read")
-anotherBook.createBook();
-
-const third = new Book('something', 'someone',123, 'read' )
-third.createBook();
-
-addBookBtn.addEventListener('click', ()=>{
-    form.style.display = "block";
-})
-
-cancel.addEventListener('click', ()=>{
-    form.style.display = "none"
-})
-
-submit.addEventListener('click', ()=>{
-    const fourthBook = new Book(`${tt.value}`, `${au.value}`, `${pg.value}`, `${rd.value}`)
-    fourthBook.createBook();
-    form.style.display = "none"
-})
